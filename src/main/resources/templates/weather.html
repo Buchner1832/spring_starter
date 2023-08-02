@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang=“en” xmlns=“http://www.w3.org/1999/xhtml” xmlns:th=“http://www.thymeleaf.org”>
+<head>
+    <title th:text = "${title}"></title>
+    <link rel="stylesheet" href="/bulma.min.css">
+</head>
+<body>
+   
+        <section class="hero is-fullheight is-text-centered">
+            <div class="hero-body container">
+                <div th:if="${err}==''" >
+                    <p class = "title" th:text="'Die aktuelle Temperatur in ' + ${city} + ' beträgt '+ ${current_temp} + '°C'"></p>
+                    <p class="subtitle"> Die Information  wurde über die <em>Free Weather API</em> (siehe <a href="https://open-meteo.com">https://open-meteo.com</a>) abgerufen. Beachte: In der Ursprungsversion dieser Vorlage wird immer die aktuelle Temperatur von Bamberg angezeigt, egal welche Stadt du eingibst.</p>
+                </div>
+                <div class="is-error" th:unless="${err}==''" >
+                    <p class = "title">Fehler!</p>
+                    <p class = "subtitle" th:text="${err}"></p>
+                </div>
+            </div>
+        </section>
+       
+       
+</body>
+
+</html>
+
+

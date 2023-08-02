@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang=“en” xmlns=“http://www.w3.org/1999/xhtml” xmlns:th=“http://www.thymeleaf.org”>
+<head>
+    <title th:text = "${title}"></title>
+    <link rel="stylesheet" href="/bulma.min.css">
+</head>
+<body>
+   
+        <section class="hero is-fullheight is-text-centered">
+            <div class="hero-body container">
+                <div>
+                    <p class="title"  th:text="'Hallo ' + ${name}+'!'" ></p>
+                    <p class="subtitle">Schön, dass du da bist! 😀</p>
+                    <p> Hier geht's zum <a href = "/weather/Bamberg" }}>Wetter in Bamberg</a></p>
+                </div>
+               
+            </div>
+        </section>
+       
+       
+</body>
+
+</html>
